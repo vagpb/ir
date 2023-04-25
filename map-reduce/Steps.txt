@@ -1,0 +1,49 @@
+Steps:
+1. Install Java 8: Download Java 8 from the link: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+a. Set environmental variables:
+i. User variable:
+• Variable: JAVA_HOME
+• Value: C:\java
+ii. System variable:
+• Variable: PATH
+• Value: C:\java\bin
+b. Check on cmd, see below:
+2. Install Eclipse Mars. Download it from the link: https://eclipse.org/downloads/
+and extract it into C drive.
+a. Set environmental variables:
+i. User variable:
+• Variable: ECLIPSE_HOME
+• Value: C:\eclipse
+ii. System variable:
+• Variable: PATH
+• Value: C:\eclipse \bin b. Download “hadoop2x-eclipse-plugin-master.”
+You will see three Jar files on the path “hadoop2x-eclipse-plugin-master\release.” Copy these three jar files and pate them into “C:\eclipse\dropins.” c. Download “slf4j-1.7.21.” Copy Jar files from this folder and paste them to “C:\eclipse\plugins”.
+3. Download Hadoop-2.6.x: download Hadoop 2.6.x from the link: http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.6.2/hadoop-2.6.2.tar.gz
+a. Put extracted Hadoop-2.6.x files into D drive.
+Note that do not put these extracted files into C drive, where you installed your Windows.
+b. Download “hadoop-common-2.6.0-bin-master” from the link:
+https://github.com/amihalik/hadoop-common-2.6.0-bin/tree/master/bin.
+You will see 11 files there.
+Paste all these files into the “bin” folder of Hadoop-2.6.x.
+c. Create a “data” folder inside Hadoop-2.6.x, and also create two more folders in the “data” folder as “data” and “name.”
+d. Create a folder to store temporary data during execution of a project, such as “D:\hadoop\temp.” e. Create a log folder, such as “D:\hadoop\userlog”
+f. Go to Hadoop-2.6.x /etc / Hadoop and edit four files:
+i. core-site.xml
+ii. hdfs-site.xml
+iii. mapred.xml
+iv. yarn.xml
+g. Go to the location: “Hadoop-2.6.0/etc/hadoop,” and edit “hadoop-env.cmd” by writing set JAVA_HOME= C:\Progra~1\Java\jdk1.8.0_201
+h. Set environmental variables:
+Do: My computer Properties Advance system settings Advanced Environmental variables
+i. User variables:
+• Variable: HADOOP_HOME
+• Value: D:\hadoop-2.6.0
+ii. System variable
+• Variable: Path
+• Value: D:\hadoop-2.6.2\bin D:\hadoop-2.6.2\sbin D:\hadoop-2.6.2\share\hadoop\common\* D:\hadoop-2.6.2\share\hadoop\hdfs D:\hadoop-2.6.2\share\hadoop\hdfs\lib\* D:\hadoop-2.6.2\share\hadoop\hdfs\* D:\hadoop-2.6.2\share\hadoop\yarn\lib\* D:\hadoop-2.6.2\share\hadoop\yarn\* D:\hadoop-2.6.2\share\hadoop\mapreduce\lib\* D:\hadoop-2.6.2\share\hadoop\mapreduce\* D:\hadoop-2.6.2\share\hadoop\common\lib\*
+i. Check on cmd; see below
+j. Format name-node:
+On cmd go to the location “Hadoop-2.6.2/bin” by writing on cmd “cd hadoop-2.6.2.\bin” and then “hdfs namenode –format”
+k. Start Hadoop. Go to the location: “D:\hadoop-2.6.0\sbin.” Run the following files as administrator “start-all.cmd”
+
+
